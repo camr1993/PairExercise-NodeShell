@@ -13,9 +13,9 @@ process.stdin.on('data', (data) => {
   const cmd = data.toString().trim();
 if (cmd === 'pwd') {
   getPwd();
+  process.stdout.write('\nprompt > ');
 }
 if (cmd === 'ls') {
   getLs();
 }
-  process.stdout.write('\nprompt > ');
 });
